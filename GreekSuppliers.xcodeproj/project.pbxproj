@@ -7,13 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		612F1AED2170389E00CC7BD6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 612F1AEC2170389E00CC7BD6 /* Podfile */; };
+		612F1AEF21703C0400CC7BD6 /* SetDropOffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */; };
+		613D7AF62171221300BBCA1B /* DealsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF52171221300BBCA1B /* DealsPageVC.swift */; };
+		613D7AF82171222400BBCA1B /* AvailabilityPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */; };
+		613D7AFA2171276E00BBCA1B /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF92171276E00BBCA1B /* DealCell.swift */; };
+		613D7AFC2171388E00BBCA1B /* NearbyDistributorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AFB2171388E00BBCA1B /* NearbyDistributorsVC.swift */; };
 		61C3E524216FA16600D42DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3E523216FA16600D42DA9 /* AppDelegate.swift */; };
-		61C3E526216FA16600D42DA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3E525216FA16600D42DA9 /* ViewController.swift */; };
 		61C3E529216FA16600D42DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C3E527216FA16600D42DA9 /* Main.storyboard */; };
 		61C3E52B216FA16800D42DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C3E52A216FA16800D42DA9 /* Assets.xcassets */; };
 		61C3E52E216FA16800D42DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C3E52C216FA16800D42DA9 /* LaunchScreen.storyboard */; };
 		61C3E539216FA16800D42DA9 /* GreekSuppliersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3E538216FA16800D42DA9 /* GreekSuppliersTests.swift */; };
 		61C3E544216FA16800D42DA9 /* GreekSuppliersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3E543216FA16800D42DA9 /* GreekSuppliersUITests.swift */; };
+		61E758DD216FBB4200D745F9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E758DB216FBB4100D745F9 /* SWRevealViewController.m */; };
+		61E758E1216FBE6000D745F9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E0216FBE6000D745F9 /* HomeVC.swift */; };
+		61E758E3216FC20A00D745F9 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E2216FC20A00D745F9 /* MenuVC.swift */; };
+		61E758E5216FC2A500D745F9 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E4216FC2A500D745F9 /* MenuCell.swift */; };
+		61E758E9216FC6D400D745F9 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E8216FC6D400D745F9 /* PaymentVC.swift */; };
+		61E758F0216FD60400D745F9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758EF216FD60400D745F9 /* SettingsVC.swift */; };
+		61E758F2216FD61100D745F9 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758F1216FD61100D745F9 /* HelpVC.swift */; };
+		61E758F4216FD62100D745F9 /* BrandAmbassadorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758F3216FD62100D745F9 /* BrandAmbassadorVC.swift */; };
+		61E758F6216FD62D00D745F9 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758F5216FD62D00D745F9 /* ProductsVC.swift */; };
+		61E758F8216FEA0A00D745F9 /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758F7216FEA0A00D745F9 /* MenuHeader.swift */; };
+		61E758FB216FEEA500D745F9 /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758FA216FEEA500D745F9 /* PackageCell.swift */; };
+		61E758FE21700E7A00D745F9 /* Source_Serif_Pro in Resources */ = {isa = PBXBuildFile; fileRef = 61E758FD21700E7900D745F9 /* Source_Serif_Pro */; };
+		61E7590021700E8500D745F9 /* Cinzel in Resources */ = {isa = PBXBuildFile; fileRef = 61E758FF21700E8500D745F9 /* Cinzel */; };
+		61E759022170100F00D745F9 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E759012170100F00D745F9 /* Helper.swift */; };
+		61E759032170112400D745F9 /* Source_Serif_Pro in Resources */ = {isa = PBXBuildFile; fileRef = 61E758FD21700E7900D745F9 /* Source_Serif_Pro */; };
+		61E759042170112400D745F9 /* Source_Serif_Pro in Resources */ = {isa = PBXBuildFile; fileRef = 61E758FD21700E7900D745F9 /* Source_Serif_Pro */; };
+		61E759052170112600D745F9 /* Cinzel in Resources */ = {isa = PBXBuildFile; fileRef = 61E758FF21700E8500D745F9 /* Cinzel */; };
+		61E759062170112600D745F9 /* Cinzel in Resources */ = {isa = PBXBuildFile; fileRef = 61E758FF21700E8500D745F9 /* Cinzel */; };
+		61FDADC421714F4B00A6AA05 /* TimeNeededVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */; };
+		61FDADC6217151E000A6AA05 /* OrderSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */; };
+		61FDADC82171525B00A6AA05 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC72171525B00A6AA05 /* OrderCell.swift */; };
+		95EB4C4FF4278195C01E9B17 /* libPods-GreekSuppliers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +61,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		612F1AEC2170389E00CC7BD6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDropOffVC.swift; sourceTree = "<group>"; };
+		613D7AF52171221300BBCA1B /* DealsPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsPageVC.swift; sourceTree = "<group>"; };
+		613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityPageVC.swift; sourceTree = "<group>"; };
+		613D7AF92171276E00BBCA1B /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
+		613D7AFB2171388E00BBCA1B /* NearbyDistributorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDistributorsVC.swift; sourceTree = "<group>"; };
 		61C3E520216FA16600D42DA9 /* GreekSuppliers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekSuppliers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3E523216FA16600D42DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61C3E525216FA16600D42DA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61C3E528216FA16600D42DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61C3E52A216FA16800D42DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C3E52D216FA16800D42DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +79,28 @@
 		61C3E53F216FA16800D42DA9 /* GreekSuppliersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreekSuppliersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3E543216FA16800D42DA9 /* GreekSuppliersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreekSuppliersUITests.swift; sourceTree = "<group>"; };
 		61C3E545216FA16800D42DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61E758DA216FBB4100D745F9 /* GreekSuppliers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GreekSuppliers-Bridging-Header.h"; sourceTree = "<group>"; };
+		61E758DB216FBB4100D745F9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		61E758DC216FBB4100D745F9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		61E758E0216FBE6000D745F9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		61E758E2216FC20A00D745F9 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		61E758E4216FC2A500D745F9 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		61E758E8216FC6D400D745F9 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
+		61E758EF216FD60400D745F9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		61E758F1216FD61100D745F9 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		61E758F3216FD62100D745F9 /* BrandAmbassadorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandAmbassadorVC.swift; sourceTree = "<group>"; };
+		61E758F5216FD62D00D745F9 /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		61E758F7216FEA0A00D745F9 /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
+		61E758FA216FEEA500D745F9 /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
+		61E758FD21700E7900D745F9 /* Source_Serif_Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Source_Serif_Pro; sourceTree = "<group>"; };
+		61E758FF21700E8500D745F9 /* Cinzel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cinzel; sourceTree = "<group>"; };
+		61E759012170100F00D745F9 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeNeededVC.swift; sourceTree = "<group>"; };
+		61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryVC.swift; sourceTree = "<group>"; };
+		61FDADC72171525B00A6AA05 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		A3146AF725A8C0D2743BF730 /* Pods-GreekSuppliers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreekSuppliers.release.xcconfig"; path = "Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers.release.xcconfig"; sourceTree = "<group>"; };
+		A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GreekSuppliers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69CEF400A9C90FB437051BC /* Pods-GreekSuppliers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreekSuppliers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EB4C4FF4278195C01E9B17 /* libPods-GreekSuppliers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +132,13 @@
 		61C3E517216FA16600D42DA9 = {
 			isa = PBXGroup;
 			children = (
+				612F1AEC2170389E00CC7BD6 /* Podfile */,
 				61C3E522216FA16600D42DA9 /* GreekSuppliers */,
 				61C3E537216FA16800D42DA9 /* GreekSuppliersTests */,
 				61C3E542216FA16800D42DA9 /* GreekSuppliersUITests */,
 				61C3E521216FA16600D42DA9 /* Products */,
+				94FAF8BD63AA15AEA61CD223 /* Pods */,
+				E161716255570447B603273C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +155,16 @@
 		61C3E522216FA16600D42DA9 /* GreekSuppliers */ = {
 			isa = PBXGroup;
 			children = (
-				61C3E523216FA16600D42DA9 /* AppDelegate.swift */,
-				61C3E525216FA16600D42DA9 /* ViewController.swift */,
-				61C3E527216FA16600D42DA9 /* Main.storyboard */,
+				61E758FC21700E6000D745F9 /* Fonts */,
+				61E758EB216FC8D800D745F9 /* Model */,
+				61E758EC216FC8E000D745F9 /* View */,
+				61E758ED216FC8E400D745F9 /* Controller */,
 				61C3E52A216FA16800D42DA9 /* Assets.xcassets */,
-				61C3E52C216FA16800D42DA9 /* LaunchScreen.storyboard */,
 				61C3E52F216FA16800D42DA9 /* Info.plist */,
+				61E759012170100F00D745F9 /* Helper.swift */,
+				61E758DA216FBB4100D745F9 /* GreekSuppliers-Bridging-Header.h */,
+				61E758DC216FBB4100D745F9 /* SWRevealViewController.h */,
+				61E758DB216FBB4100D745F9 /* SWRevealViewController.m */,
 			);
 			path = GreekSuppliers;
 			sourceTree = "<group>";
@@ -125,6 +187,90 @@
 			path = GreekSuppliersUITests;
 			sourceTree = "<group>";
 		};
+		61E758EB216FC8D800D745F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61C3E523216FA16600D42DA9 /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61E758EC216FC8E000D745F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61C3E527216FA16600D42DA9 /* Main.storyboard */,
+				61C3E52C216FA16800D42DA9 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61E758ED216FC8E400D745F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				61E758E2216FC20A00D745F9 /* MenuVC.swift */,
+				61E758F7216FEA0A00D745F9 /* MenuHeader.swift */,
+				61E758E4216FC2A500D745F9 /* MenuCell.swift */,
+				61E758EE216FD5EC00D745F9 /* Pages */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		61E758EE216FD5EC00D745F9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				61E758F9216FED0500D745F9 /* Home */,
+				61E758E8216FC6D400D745F9 /* PaymentVC.swift */,
+				61E758F3216FD62100D745F9 /* BrandAmbassadorVC.swift */,
+				61E758F5216FD62D00D745F9 /* ProductsVC.swift */,
+				61E758EF216FD60400D745F9 /* SettingsVC.swift */,
+				61E758F1216FD61100D745F9 /* HelpVC.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		61E758F9216FED0500D745F9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61E758E0216FBE6000D745F9 /* HomeVC.swift */,
+				61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */,
+				612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */,
+				613D7AFB2171388E00BBCA1B /* NearbyDistributorsVC.swift */,
+				61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */,
+				61FDADC72171525B00A6AA05 /* OrderCell.swift */,
+				61E758FA216FEEA500D745F9 /* PackageCell.swift */,
+				613D7AF52171221300BBCA1B /* DealsPageVC.swift */,
+				613D7AF92171276E00BBCA1B /* DealCell.swift */,
+				613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		61E758FC21700E6000D745F9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				61E758FD21700E7900D745F9 /* Source_Serif_Pro */,
+				61E758FF21700E8500D745F9 /* Cinzel */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		94FAF8BD63AA15AEA61CD223 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C69CEF400A9C90FB437051BC /* Pods-GreekSuppliers.debug.xcconfig */,
+				A3146AF725A8C0D2743BF730 /* Pods-GreekSuppliers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E161716255570447B603273C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61C3E548216FA16800D42DA9 /* Build configuration list for PBXNativeTarget "GreekSuppliers" */;
 			buildPhases = (
+				744B4A1B211C8A91E09939DD /* [CP] Check Pods Manifest.lock */,
 				61C3E51C216FA16600D42DA9 /* Sources */,
 				61C3E51D216FA16600D42DA9 /* Frameworks */,
 				61C3E51E216FA16600D42DA9 /* Resources */,
+				14856866C47B9D3E34663E28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +341,7 @@
 				TargetAttributes = {
 					61C3E51F216FA16600D42DA9 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					61C3E533216FA16800D42DA9 = {
 						CreatedOnToolsVersion = 10.0;
@@ -229,7 +378,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612F1AED2170389E00CC7BD6 /* Podfile in Resources */,
+				61E7590021700E8500D745F9 /* Cinzel in Resources */,
 				61C3E52E216FA16800D42DA9 /* LaunchScreen.storyboard in Resources */,
+				61E758FE21700E7A00D745F9 /* Source_Serif_Pro in Resources */,
 				61C3E52B216FA16800D42DA9 /* Assets.xcassets in Resources */,
 				61C3E529216FA16600D42DA9 /* Main.storyboard in Resources */,
 			);
@@ -239,6 +391,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E759032170112400D745F9 /* Source_Serif_Pro in Resources */,
+				61E759052170112600D745F9 /* Cinzel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,18 +400,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E759042170112400D745F9 /* Source_Serif_Pro in Resources */,
+				61E759062170112600D745F9 /* Cinzel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14856866C47B9D3E34663E28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		744B4A1B211C8A91E09939DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreekSuppliers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		61C3E51C216FA16600D42DA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61C3E526216FA16600D42DA9 /* ViewController.swift in Sources */,
+				61E758F6216FD62D00D745F9 /* ProductsVC.swift in Sources */,
+				61E758F4216FD62100D745F9 /* BrandAmbassadorVC.swift in Sources */,
+				612F1AEF21703C0400CC7BD6 /* SetDropOffVC.swift in Sources */,
+				61E758E1216FBE6000D745F9 /* HomeVC.swift in Sources */,
+				613D7AF82171222400BBCA1B /* AvailabilityPageVC.swift in Sources */,
+				61E758F2216FD61100D745F9 /* HelpVC.swift in Sources */,
+				61E758FB216FEEA500D745F9 /* PackageCell.swift in Sources */,
+				61E758E9216FC6D400D745F9 /* PaymentVC.swift in Sources */,
+				61FDADC421714F4B00A6AA05 /* TimeNeededVC.swift in Sources */,
+				61E758E5216FC2A500D745F9 /* MenuCell.swift in Sources */,
+				613D7AFC2171388E00BBCA1B /* NearbyDistributorsVC.swift in Sources */,
+				61E758E3216FC20A00D745F9 /* MenuVC.swift in Sources */,
+				61E758F8216FEA0A00D745F9 /* MenuHeader.swift in Sources */,
+				613D7AF62171221300BBCA1B /* DealsPageVC.swift in Sources */,
 				61C3E524216FA16600D42DA9 /* AppDelegate.swift in Sources */,
+				61E759022170100F00D745F9 /* Helper.swift in Sources */,
+				61FDADC82171525B00A6AA05 /* OrderCell.swift in Sources */,
+				613D7AFA2171276E00BBCA1B /* DealCell.swift in Sources */,
+				61E758DD216FBB4200D745F9 /* SWRevealViewController.m in Sources */,
+				61FDADC6217151E000A6AA05 /* OrderSummaryVC.swift in Sources */,
+				61E758F0216FD60400D745F9 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,8 +646,10 @@
 		};
 		61C3E549216FA16800D42DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69CEF400A9C90FB437051BC /* Pods-GreekSuppliers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AY2AXR6GXX;
 				INFOPLIST_FILE = GreekSuppliers/Info.plist;
@@ -441,6 +659,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BarakHarari.GreekSuppliers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GreekSuppliers/GreekSuppliers-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,8 +668,10 @@
 		};
 		61C3E54A216FA16800D42DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3146AF725A8C0D2743BF730 /* Pods-GreekSuppliers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AY2AXR6GXX;
 				INFOPLIST_FILE = GreekSuppliers/Info.plist;
@@ -459,6 +681,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BarakHarari.GreekSuppliers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GreekSuppliers/GreekSuppliers-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
