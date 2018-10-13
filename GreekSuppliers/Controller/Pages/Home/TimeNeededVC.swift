@@ -15,6 +15,13 @@ class TimeNeededVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeNavBar()
+        
+        let tapScreen = UITapGestureRecognizer(target: self, action: #selector(doneTyping))
+        view.addGestureRecognizer(tapScreen)
+    }
+    
+    @objc func doneTyping(){
+        view.endEditing(true)
     }
 
     func customizeNavBar(){

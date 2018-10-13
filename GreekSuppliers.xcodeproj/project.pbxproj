@@ -40,6 +40,8 @@
 		61FDADC421714F4B00A6AA05 /* TimeNeededVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */; };
 		61FDADC6217151E000A6AA05 /* OrderSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */; };
 		61FDADC82171525B00A6AA05 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC72171525B00A6AA05 /* OrderCell.swift */; };
+		61FDADCA2171589D00A6AA05 /* PriceFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC92171589D00A6AA05 /* PriceFooter.swift */; };
+		61FDADDD21719A4300A6AA05 /* OrderTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADDC21719A4300A6AA05 /* OrderTimeCell.swift */; };
 		95EB4C4FF4278195C01E9B17 /* libPods-GreekSuppliers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeNeededVC.swift; sourceTree = "<group>"; };
 		61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryVC.swift; sourceTree = "<group>"; };
 		61FDADC72171525B00A6AA05 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		61FDADC92171589D00A6AA05 /* PriceFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFooter.swift; sourceTree = "<group>"; };
+		61FDADDC21719A4300A6AA05 /* OrderTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTimeCell.swift; sourceTree = "<group>"; };
 		A3146AF725A8C0D2743BF730 /* Pods-GreekSuppliers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreekSuppliers.release.xcconfig"; path = "Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers.release.xcconfig"; sourceTree = "<group>"; };
 		A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GreekSuppliers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69CEF400A9C90FB437051BC /* Pods-GreekSuppliers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreekSuppliers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -236,11 +240,12 @@
 				612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */,
 				613D7AFB2171388E00BBCA1B /* NearbyDistributorsVC.swift */,
 				61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */,
+				61FDADC92171589D00A6AA05 /* PriceFooter.swift */,
 				61FDADC72171525B00A6AA05 /* OrderCell.swift */,
 				61E758FA216FEEA500D745F9 /* PackageCell.swift */,
 				613D7AF52171221300BBCA1B /* DealsPageVC.swift */,
 				613D7AF92171276E00BBCA1B /* DealCell.swift */,
-				613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */,
+				61FDADD52171901D00A6AA05 /* Calendar */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -252,6 +257,15 @@
 				61E758FF21700E8500D745F9 /* Cinzel */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		61FDADD52171901D00A6AA05 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */,
+				61FDADDC21719A4300A6AA05 /* OrderTimeCell.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		94FAF8BD63AA15AEA61CD223 /* Pods */ = {
@@ -453,9 +467,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61FDADCA2171589D00A6AA05 /* PriceFooter.swift in Sources */,
 				61E758F6216FD62D00D745F9 /* ProductsVC.swift in Sources */,
 				61E758F4216FD62100D745F9 /* BrandAmbassadorVC.swift in Sources */,
 				612F1AEF21703C0400CC7BD6 /* SetDropOffVC.swift in Sources */,
+				61FDADDD21719A4300A6AA05 /* OrderTimeCell.swift in Sources */,
 				61E758E1216FBE6000D745F9 /* HomeVC.swift in Sources */,
 				613D7AF82171222400BBCA1B /* AvailabilityPageVC.swift in Sources */,
 				61E758F2216FD61100D745F9 /* HelpVC.swift in Sources */,
@@ -653,6 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AY2AXR6GXX;
 				INFOPLIST_FILE = GreekSuppliers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -675,6 +692,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AY2AXR6GXX;
 				INFOPLIST_FILE = GreekSuppliers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
