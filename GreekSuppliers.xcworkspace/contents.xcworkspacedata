@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/barakharari/Desktop/CompSci/GreekSuppliers/GreekSuppliers/Controller/Pages/Home/ProductInfoVC.swift">
+   </FileRef>
+   <FileRef
       location = "group:GreekSuppliers.xcodeproj">
    </FileRef>
    <FileRef

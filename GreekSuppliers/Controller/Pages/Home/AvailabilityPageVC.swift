@@ -12,6 +12,8 @@ import UIKit
 
 class AvailabilityPageVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var continueButton: UIButton!
+    
     @IBAction func locationButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "dropoffLocation", sender: self)
     }
@@ -23,6 +25,8 @@ class AvailabilityPageVC: UIViewController, UICollectionViewDataSource, UICollec
         
         super.viewDidLoad()
         customizeNavBar()
+        
+        continueButton.layer.cornerRadius = 10
         
         let tapView = UITapGestureRecognizer(target: self, action: #selector(endEditing))
         view.addGestureRecognizer(tapView)
@@ -36,7 +40,7 @@ class AvailabilityPageVC: UIViewController, UICollectionViewDataSource, UICollec
     func customizeNavBar(){
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = navBarColor
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Semibold", size: 19)!]
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

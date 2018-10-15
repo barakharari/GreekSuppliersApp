@@ -18,7 +18,7 @@ class MenuVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     @IBOutlet weak var menuCollectionView: UICollectionView!
     
-    var pagesArray = [Page(image: UIImage(named: "menuIcon"), name: "Home", aClass: HomeVC.self), Page(image: UIImage(named: "menuIcon"), name: "Payment", aClass: PaymentVC.self), Page(image: UIImage(named: "menuIcon"), name: "Brand Ambassador", aClass: BrandAmbassadorVC.self), Page(image: UIImage(named: "menuIcon"), name: "Products", aClass: ProductsVC.self), Page(image: UIImage(named: "menuIcon"), name: "Settings", aClass: SettingsVC.self), Page(image: UIImage(named: "menuIcon"), name: "Help", aClass: HelpVC.self)]
+    var pagesArray = [Page(image: UIImage(named: "menuIcon"), name: "My Order", aClass: HomeVC.self), Page(image: UIImage(named: "menuIcon"), name: "Payment", aClass: PaymentVC.self), Page(image: UIImage(named: "menuIcon"), name: "Brand Ambassador", aClass: BrandAmbassadorVC.self), Page(image: UIImage(named: "menuIcon"), name: "Products", aClass: ProductsVC.self), Page(image: UIImage(named: "menuIcon"), name: "Settings", aClass: SettingsVC.self), Page(image: UIImage(named: "menuIcon"), name: "Help", aClass: HelpVC.self)]
     
     override func viewDidLoad() {
         super.viewDidLoad()

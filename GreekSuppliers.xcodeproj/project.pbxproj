@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		612D5AE721727E9B002F4F9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 612D5AE621727E9A002F4F9B /* GoogleService-Info.plist */; };
+		612D5AE92172842E002F4F9B /* EnterInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D5AE82172842E002F4F9B /* EnterInfoVC.swift */; };
+		612D5AEB2172A5F0002F4F9B /* EmailPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D5AEA2172A5F0002F4F9B /* EmailPasswordVC.swift */; };
+		612D5AED2172AFB0002F4F9B /* ProductsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D5AEC2172AFB0002F4F9B /* ProductsPageVC.swift */; };
+		612D5AEF2172B6DE002F4F9B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D5AEE2172B6DE002F4F9B /* ProductCell.swift */; };
 		612F1AED2170389E00CC7BD6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 612F1AEC2170389E00CC7BD6 /* Podfile */; };
 		612F1AEF21703C0400CC7BD6 /* SetDropOffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */; };
+		6138BF92217416CB002FD3FF /* TierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138BF91217416CB002FD3FF /* TierCell.swift */; };
+		6138BF94217416E3002FD3FF /* ProductInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138BF93217416E3002FD3FF /* ProductInfoVC.swift */; };
+		6138BF96217426EF002FD3FF /* NoPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138BF95217426EF002FD3FF /* NoPlanVC.swift */; };
 		613D7AF62171221300BBCA1B /* DealsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF52171221300BBCA1B /* DealsPageVC.swift */; };
 		613D7AF82171222400BBCA1B /* AvailabilityPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */; };
 		613D7AFA2171276E00BBCA1B /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF92171276E00BBCA1B /* DealCell.swift */; };
@@ -40,9 +48,8 @@
 		61FDADC421714F4B00A6AA05 /* TimeNeededVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */; };
 		61FDADC6217151E000A6AA05 /* OrderSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */; };
 		61FDADC82171525B00A6AA05 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC72171525B00A6AA05 /* OrderCell.swift */; };
-		61FDADCA2171589D00A6AA05 /* PriceFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADC92171589D00A6AA05 /* PriceFooter.swift */; };
 		61FDADDD21719A4300A6AA05 /* OrderTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FDADDC21719A4300A6AA05 /* OrderTimeCell.swift */; };
-		95EB4C4FF4278195C01E9B17 /* libPods-GreekSuppliers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */; };
+		B9B7AC38750D5B31581DC7C3 /* libPods-GreekSuppliers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CCCF8F1C0C5F644DEA625C /* libPods-GreekSuppliers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +70,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		612F1AEC2170389E00CC7BD6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		612D5AE621727E9A002F4F9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		612D5AE82172842E002F4F9B /* EnterInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInfoVC.swift; sourceTree = "<group>"; };
+		612D5AEA2172A5F0002F4F9B /* EmailPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPasswordVC.swift; sourceTree = "<group>"; };
+		612D5AEC2172AFB0002F4F9B /* ProductsPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPageVC.swift; sourceTree = "<group>"; };
+		612D5AEE2172B6DE002F4F9B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		612F1AEC2170389E00CC7BD6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDropOffVC.swift; sourceTree = "<group>"; };
+		6138BF91217416CB002FD3FF /* TierCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierCell.swift; sourceTree = "<group>"; };
+		6138BF93217416E3002FD3FF /* ProductInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductInfoVC.swift; path = /Users/barakharari/Desktop/CompSci/GreekSuppliers/GreekSuppliers/Controller/Pages/Home/ProductInfoVC.swift; sourceTree = "<absolute>"; };
+		6138BF95217426EF002FD3FF /* NoPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPlanVC.swift; sourceTree = "<group>"; };
 		613D7AF52171221300BBCA1B /* DealsPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsPageVC.swift; sourceTree = "<group>"; };
 		613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityPageVC.swift; sourceTree = "<group>"; };
 		613D7AF92171276E00BBCA1B /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
@@ -100,11 +115,10 @@
 		61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeNeededVC.swift; sourceTree = "<group>"; };
 		61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryVC.swift; sourceTree = "<group>"; };
 		61FDADC72171525B00A6AA05 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
-		61FDADC92171589D00A6AA05 /* PriceFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFooter.swift; sourceTree = "<group>"; };
 		61FDADDC21719A4300A6AA05 /* OrderTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTimeCell.swift; sourceTree = "<group>"; };
 		A3146AF725A8C0D2743BF730 /* Pods-GreekSuppliers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreekSuppliers.release.xcconfig"; path = "Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers.release.xcconfig"; sourceTree = "<group>"; };
-		A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GreekSuppliers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69CEF400A9C90FB437051BC /* Pods-GreekSuppliers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreekSuppliers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GreekSuppliers/Pods-GreekSuppliers.debug.xcconfig"; sourceTree = "<group>"; };
+		F2CCCF8F1C0C5F644DEA625C /* libPods-GreekSuppliers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GreekSuppliers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95EB4C4FF4278195C01E9B17 /* libPods-GreekSuppliers.a in Frameworks */,
+				B9B7AC38750D5B31581DC7C3 /* libPods-GreekSuppliers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +179,7 @@
 				61E758ED216FC8E400D745F9 /* Controller */,
 				61C3E52A216FA16800D42DA9 /* Assets.xcassets */,
 				61C3E52F216FA16800D42DA9 /* Info.plist */,
+				612D5AE621727E9A002F4F9B /* GoogleService-Info.plist */,
 				61E759012170100F00D745F9 /* Helper.swift */,
 				61E758DA216FBB4100D745F9 /* GreekSuppliers-Bridging-Header.h */,
 				61E758DC216FBB4100D745F9 /* SWRevealViewController.h */,
@@ -211,6 +226,9 @@
 		61E758ED216FC8E400D745F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				612D5AE82172842E002F4F9B /* EnterInfoVC.swift */,
+				612D5AEA2172A5F0002F4F9B /* EmailPasswordVC.swift */,
+				61E758E0216FBE6000D745F9 /* HomeVC.swift */,
 				61E758E2216FC20A00D745F9 /* MenuVC.swift */,
 				61E758F7216FEA0A00D745F9 /* MenuHeader.swift */,
 				61E758E4216FC2A500D745F9 /* MenuCell.swift */,
@@ -235,17 +253,21 @@
 		61E758F9216FED0500D745F9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				61E758E0216FBE6000D745F9 /* HomeVC.swift */,
+				6138BF95217426EF002FD3FF /* NoPlanVC.swift */,
+				612D5AEC2172AFB0002F4F9B /* ProductsPageVC.swift */,
+				612D5AEE2172B6DE002F4F9B /* ProductCell.swift */,
+				6138BF93217416E3002FD3FF /* ProductInfoVC.swift */,
+				6138BF91217416CB002FD3FF /* TierCell.swift */,
 				61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */,
 				612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */,
 				613D7AFB2171388E00BBCA1B /* NearbyDistributorsVC.swift */,
 				61FDADC5217151E000A6AA05 /* OrderSummaryVC.swift */,
-				61FDADC92171589D00A6AA05 /* PriceFooter.swift */,
 				61FDADC72171525B00A6AA05 /* OrderCell.swift */,
 				61E758FA216FEEA500D745F9 /* PackageCell.swift */,
 				613D7AF52171221300BBCA1B /* DealsPageVC.swift */,
 				613D7AF92171276E00BBCA1B /* DealCell.swift */,
-				61FDADD52171901D00A6AA05 /* Calendar */,
+				613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */,
+				61FDADDC21719A4300A6AA05 /* OrderTimeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -257,15 +279,6 @@
 				61E758FF21700E8500D745F9 /* Cinzel */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		61FDADD52171901D00A6AA05 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */,
-				61FDADDC21719A4300A6AA05 /* OrderTimeCell.swift */,
-			);
-			path = Calendar;
 			sourceTree = "<group>";
 		};
 		94FAF8BD63AA15AEA61CD223 /* Pods */ = {
@@ -280,7 +293,7 @@
 		E161716255570447B603273C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A558F6BB9E917881711FCB40 /* libPods-GreekSuppliers.a */,
+				F2CCCF8F1C0C5F644DEA625C /* libPods-GreekSuppliers.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -397,6 +410,7 @@
 				61C3E52E216FA16800D42DA9 /* LaunchScreen.storyboard in Resources */,
 				61E758FE21700E7A00D745F9 /* Source_Serif_Pro in Resources */,
 				61C3E52B216FA16800D42DA9 /* Assets.xcassets in Resources */,
+				612D5AE721727E9B002F4F9B /* GoogleService-Info.plist in Resources */,
 				61C3E529216FA16600D42DA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,23 +481,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61FDADCA2171589D00A6AA05 /* PriceFooter.swift in Sources */,
 				61E758F6216FD62D00D745F9 /* ProductsVC.swift in Sources */,
+				6138BF92217416CB002FD3FF /* TierCell.swift in Sources */,
 				61E758F4216FD62100D745F9 /* BrandAmbassadorVC.swift in Sources */,
 				612F1AEF21703C0400CC7BD6 /* SetDropOffVC.swift in Sources */,
 				61FDADDD21719A4300A6AA05 /* OrderTimeCell.swift in Sources */,
+				612D5AEB2172A5F0002F4F9B /* EmailPasswordVC.swift in Sources */,
 				61E758E1216FBE6000D745F9 /* HomeVC.swift in Sources */,
 				613D7AF82171222400BBCA1B /* AvailabilityPageVC.swift in Sources */,
+				6138BF94217416E3002FD3FF /* ProductInfoVC.swift in Sources */,
 				61E758F2216FD61100D745F9 /* HelpVC.swift in Sources */,
 				61E758FB216FEEA500D745F9 /* PackageCell.swift in Sources */,
 				61E758E9216FC6D400D745F9 /* PaymentVC.swift in Sources */,
 				61FDADC421714F4B00A6AA05 /* TimeNeededVC.swift in Sources */,
+				612D5AED2172AFB0002F4F9B /* ProductsPageVC.swift in Sources */,
 				61E758E5216FC2A500D745F9 /* MenuCell.swift in Sources */,
 				613D7AFC2171388E00BBCA1B /* NearbyDistributorsVC.swift in Sources */,
 				61E758E3216FC20A00D745F9 /* MenuVC.swift in Sources */,
 				61E758F8216FEA0A00D745F9 /* MenuHeader.swift in Sources */,
 				613D7AF62171221300BBCA1B /* DealsPageVC.swift in Sources */,
+				6138BF96217426EF002FD3FF /* NoPlanVC.swift in Sources */,
+				612D5AEF2172B6DE002F4F9B /* ProductCell.swift in Sources */,
 				61C3E524216FA16600D42DA9 /* AppDelegate.swift in Sources */,
+				612D5AE92172842E002F4F9B /* EnterInfoVC.swift in Sources */,
 				61E759022170100F00D745F9 /* Helper.swift in Sources */,
 				61FDADC82171525B00A6AA05 /* OrderCell.swift in Sources */,
 				613D7AFA2171276E00BBCA1B /* DealCell.swift in Sources */,
@@ -667,14 +687,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AY2AXR6GXX;
+				DEVELOPMENT_TEAM = 8FGTP3W2X2;
 				INFOPLIST_FILE = GreekSuppliers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BarakHarari.GreekSuppliers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HarariApps.GreekSuppliers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GreekSuppliers/GreekSuppliers-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -690,14 +710,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AY2AXR6GXX;
+				DEVELOPMENT_TEAM = 8FGTP3W2X2;
 				INFOPLIST_FILE = GreekSuppliers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.BarakHarari.GreekSuppliers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HarariApps.GreekSuppliers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GreekSuppliers/GreekSuppliers-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

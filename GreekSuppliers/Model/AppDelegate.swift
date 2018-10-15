@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
         GMSServices.provideAPIKey("AIzaSyDuv7w4UnOkVOGGaowZLg1kynrf7ZO_V5E")
         GMSPlacesClient.provideAPIKey("AIzaSyDuv7w4UnOkVOGGaowZLg1kynrf7ZO_V5E")
+            FirebaseApp.configure()
         return true
     }
 
