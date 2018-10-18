@@ -33,5 +33,8 @@ class DealsPageVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         cell.dealConfirmButton.layer.cornerRadius = 10
         return cell
     }
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }

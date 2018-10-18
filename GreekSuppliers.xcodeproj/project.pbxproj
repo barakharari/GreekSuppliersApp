@@ -14,13 +14,15 @@
 		612D5AEF2172B6DE002F4F9B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D5AEE2172B6DE002F4F9B /* ProductCell.swift */; };
 		612F1AED2170389E00CC7BD6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 612F1AEC2170389E00CC7BD6 /* Podfile */; };
 		612F1AEF21703C0400CC7BD6 /* SetDropOffVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */; };
+		6134AE3221753C8800C1488B /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE3121753C8800C1488B /* LoginPageVC.swift */; };
+		6134AE36217540DE00C1488B /* ProductInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134AE35217540DE00C1488B /* ProductInfoVC.swift */; };
 		6138BF92217416CB002FD3FF /* TierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138BF91217416CB002FD3FF /* TierCell.swift */; };
-		6138BF94217416E3002FD3FF /* ProductInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138BF93217416E3002FD3FF /* ProductInfoVC.swift */; };
 		6138BF96217426EF002FD3FF /* NoPlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6138BF95217426EF002FD3FF /* NoPlanVC.swift */; };
 		613D7AF62171221300BBCA1B /* DealsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF52171221300BBCA1B /* DealsPageVC.swift */; };
 		613D7AF82171222400BBCA1B /* AvailabilityPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */; };
 		613D7AFA2171276E00BBCA1B /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AF92171276E00BBCA1B /* DealCell.swift */; };
 		613D7AFC2171388E00BBCA1B /* NearbyDistributorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D7AFB2171388E00BBCA1B /* NearbyDistributorsVC.swift */; };
+		6173418D21768A5300148620 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6173418C21768A5300148620 /* Product.swift */; };
 		61C3E524216FA16600D42DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3E523216FA16600D42DA9 /* AppDelegate.swift */; };
 		61C3E529216FA16600D42DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C3E527216FA16600D42DA9 /* Main.storyboard */; };
 		61C3E52B216FA16800D42DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C3E52A216FA16800D42DA9 /* Assets.xcassets */; };
@@ -28,7 +30,6 @@
 		61C3E539216FA16800D42DA9 /* GreekSuppliersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3E538216FA16800D42DA9 /* GreekSuppliersTests.swift */; };
 		61C3E544216FA16800D42DA9 /* GreekSuppliersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C3E543216FA16800D42DA9 /* GreekSuppliersUITests.swift */; };
 		61E758DD216FBB4200D745F9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E758DB216FBB4100D745F9 /* SWRevealViewController.m */; };
-		61E758E1216FBE6000D745F9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E0216FBE6000D745F9 /* HomeVC.swift */; };
 		61E758E3216FC20A00D745F9 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E2216FC20A00D745F9 /* MenuVC.swift */; };
 		61E758E5216FC2A500D745F9 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E4216FC2A500D745F9 /* MenuCell.swift */; };
 		61E758E9216FC6D400D745F9 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E758E8216FC6D400D745F9 /* PaymentVC.swift */; };
@@ -77,13 +78,15 @@
 		612D5AEE2172B6DE002F4F9B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		612F1AEC2170389E00CC7BD6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDropOffVC.swift; sourceTree = "<group>"; };
+		6134AE3121753C8800C1488B /* LoginPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
+		6134AE35217540DE00C1488B /* ProductInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfoVC.swift; sourceTree = "<group>"; };
 		6138BF91217416CB002FD3FF /* TierCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierCell.swift; sourceTree = "<group>"; };
-		6138BF93217416E3002FD3FF /* ProductInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductInfoVC.swift; path = /Users/barakharari/Desktop/CompSci/GreekSuppliers/GreekSuppliers/Controller/Pages/Home/ProductInfoVC.swift; sourceTree = "<absolute>"; };
 		6138BF95217426EF002FD3FF /* NoPlanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPlanVC.swift; sourceTree = "<group>"; };
 		613D7AF52171221300BBCA1B /* DealsPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsPageVC.swift; sourceTree = "<group>"; };
 		613D7AF72171222400BBCA1B /* AvailabilityPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityPageVC.swift; sourceTree = "<group>"; };
 		613D7AF92171276E00BBCA1B /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
 		613D7AFB2171388E00BBCA1B /* NearbyDistributorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyDistributorsVC.swift; sourceTree = "<group>"; };
+		6173418C21768A5300148620 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		61C3E520216FA16600D42DA9 /* GreekSuppliers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekSuppliers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3E523216FA16600D42DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C3E528216FA16600D42DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,7 +102,6 @@
 		61E758DA216FBB4100D745F9 /* GreekSuppliers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GreekSuppliers-Bridging-Header.h"; sourceTree = "<group>"; };
 		61E758DB216FBB4100D745F9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		61E758DC216FBB4100D745F9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		61E758E0216FBE6000D745F9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		61E758E2216FC20A00D745F9 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		61E758E4216FC2A500D745F9 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		61E758E8216FC6D400D745F9 /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
@@ -226,9 +228,9 @@
 		61E758ED216FC8E400D745F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6134AE3121753C8800C1488B /* LoginPageVC.swift */,
 				612D5AE82172842E002F4F9B /* EnterInfoVC.swift */,
 				612D5AEA2172A5F0002F4F9B /* EmailPasswordVC.swift */,
-				61E758E0216FBE6000D745F9 /* HomeVC.swift */,
 				61E758E2216FC20A00D745F9 /* MenuVC.swift */,
 				61E758F7216FEA0A00D745F9 /* MenuHeader.swift */,
 				61E758E4216FC2A500D745F9 /* MenuCell.swift */,
@@ -256,7 +258,8 @@
 				6138BF95217426EF002FD3FF /* NoPlanVC.swift */,
 				612D5AEC2172AFB0002F4F9B /* ProductsPageVC.swift */,
 				612D5AEE2172B6DE002F4F9B /* ProductCell.swift */,
-				6138BF93217416E3002FD3FF /* ProductInfoVC.swift */,
+				6173418C21768A5300148620 /* Product.swift */,
+				6134AE35217540DE00C1488B /* ProductInfoVC.swift */,
 				6138BF91217416CB002FD3FF /* TierCell.swift */,
 				61FDADC321714F4B00A6AA05 /* TimeNeededVC.swift */,
 				612F1AEE21703C0400CC7BD6 /* SetDropOffVC.swift */,
@@ -486,10 +489,9 @@
 				61E758F4216FD62100D745F9 /* BrandAmbassadorVC.swift in Sources */,
 				612F1AEF21703C0400CC7BD6 /* SetDropOffVC.swift in Sources */,
 				61FDADDD21719A4300A6AA05 /* OrderTimeCell.swift in Sources */,
+				6134AE3221753C8800C1488B /* LoginPageVC.swift in Sources */,
 				612D5AEB2172A5F0002F4F9B /* EmailPasswordVC.swift in Sources */,
-				61E758E1216FBE6000D745F9 /* HomeVC.swift in Sources */,
 				613D7AF82171222400BBCA1B /* AvailabilityPageVC.swift in Sources */,
-				6138BF94217416E3002FD3FF /* ProductInfoVC.swift in Sources */,
 				61E758F2216FD61100D745F9 /* HelpVC.swift in Sources */,
 				61E758FB216FEEA500D745F9 /* PackageCell.swift in Sources */,
 				61E758E9216FC6D400D745F9 /* PaymentVC.swift in Sources */,
@@ -499,9 +501,11 @@
 				613D7AFC2171388E00BBCA1B /* NearbyDistributorsVC.swift in Sources */,
 				61E758E3216FC20A00D745F9 /* MenuVC.swift in Sources */,
 				61E758F8216FEA0A00D745F9 /* MenuHeader.swift in Sources */,
+				6173418D21768A5300148620 /* Product.swift in Sources */,
 				613D7AF62171221300BBCA1B /* DealsPageVC.swift in Sources */,
 				6138BF96217426EF002FD3FF /* NoPlanVC.swift in Sources */,
 				612D5AEF2172B6DE002F4F9B /* ProductCell.swift in Sources */,
+				6134AE36217540DE00C1488B /* ProductInfoVC.swift in Sources */,
 				61C3E524216FA16600D42DA9 /* AppDelegate.swift in Sources */,
 				612D5AE92172842E002F4F9B /* EnterInfoVC.swift in Sources */,
 				61E759022170100F00D745F9 /* Helper.swift in Sources */,

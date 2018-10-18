@@ -13,4 +13,19 @@ class TierCell: UICollectionViewCell {
     @IBOutlet weak var tierAmount: UILabel!
     @IBOutlet weak var tierPrice: UILabel!
     @IBOutlet weak var acceptButton: UIButton!
+    
+    var buttonSelected = false
+    
+    @IBAction func pressAcceptButton(_ sender: UIButton) {
+        if !buttonSelected{
+            acceptButton.setTitle(":)", for: .normal)
+            acceptButton.layer.backgroundColor = UIColor.green.cgColor
+            buttonSelected = true
+        } else{
+            // make it a checkmark
+            acceptButton.setTitle("+", for: .normal)
+            acceptButton.layer.backgroundColor = UIColor.lightGray.cgColor
+            buttonSelected = false
+        }
+    }
 }

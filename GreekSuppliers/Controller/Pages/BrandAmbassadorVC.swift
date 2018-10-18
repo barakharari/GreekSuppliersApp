@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BrandAmbassadorVC: UIViewController, MenuPageProtocol {
+class BrandAmbassadorVC: UIViewController{
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     

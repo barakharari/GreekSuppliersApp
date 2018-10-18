@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
-class SettingsVC: UIViewController, MenuPageProtocol {
+class SettingsVC: UIViewController{
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        try! Auth.auth().signOut()
+        self.dismiss(animated: false, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenu()

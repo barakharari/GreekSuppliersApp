@@ -20,4 +20,7 @@ class NearbyDistributorsVC: UIViewController {
         view = mapView
     }
 
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 }

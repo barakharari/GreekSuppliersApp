@@ -11,11 +11,14 @@ import UIKit
 class NoPlanVC: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenu()
         customizeNavBar()
+        
+        continueButton.layer.cornerRadius = 10
     }
     
     func sideMenu(){
@@ -33,15 +36,5 @@ class NoPlanVC: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Semibold", size: 19)!]
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

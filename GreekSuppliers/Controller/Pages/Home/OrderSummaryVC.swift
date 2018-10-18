@@ -35,4 +35,7 @@ class OrderSummaryVC: UIViewController, UICollectionViewDataSource, UICollection
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Semibold", size: 19)!]
     }
 
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 }

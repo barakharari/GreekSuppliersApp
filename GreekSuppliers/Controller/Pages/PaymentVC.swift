@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaymentVC: UIViewController, MenuPageProtocol {
+class PaymentVC: UIViewController{
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     

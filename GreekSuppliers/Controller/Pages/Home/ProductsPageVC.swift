@@ -7,47 +7,91 @@
 //
 
 import UIKit
+import Firebase
 
-struct Product{
-    var name: String!
-    var image: UIImage!
-}
-
-class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MenuPageProtocol {
+class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet weak var continueButton: UIButton!
-
+    @IBOutlet weak var productCollectionView: UICollectionView!
+    
+    var dbRef: DatabaseReference!
+    var storageRef: StorageReference!
+    
+    var refresher:UIRefreshControl!
+    
     static var currentProduct: Product!
     
-    var productImagesArray = [UIImage(named: "redsolo"), UIImage(named: "koolaid"), UIImage(named: "pongballs"), UIImage(named: "soda"), UIImage(named: "shotcups")]
-    var productNameArray = ["Red Solo Cups 16oz", "Kool Aid Punch Mixer", "Pong balls", "Soda", "Shot Cups"]
+    var products = [Product]()
     
+    //refreshing function add to this?
+    @objc func refresh(){
+        //productCollectionView.reloadData()
+        refresher.endRefreshing()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Set up Nav Bar
+        customizeNavBar()
+        
+        // Customize Button
+        continueButton.layer.cornerRadius = 10
+        
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(self.refresh), for: UIControl.Event.valueChanged)
+        productCollectionView.addSubview(refresher)
+        
+        self.loadData()
+
+    }
+    
+    func loadData(){
+        // Create a reference to database
+        dbRef = Database.database().reference()
+        
+        // Parse each post
+        dbRef.child("Products").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let products = snapshot.value as! [String: AnyObject]
+        
+            for product in products{
+                let newProduct = Product(name: product.key, snapshot: snapshot)
+                self.products.append(newProduct)
+            }
+            self.productCollectionView.reloadData()
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productImagesArray.count
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
         
-        //Configuration
+        //Styling
         cell.productImageView.layer.cornerRadius = 8
         cell.productImageView.layer.borderWidth = 0.5
         cell.productImageView.layer.borderColor = UIColor.lightGray.cgColor
         cell.productName.layer.borderColor = UIColor.lightGray.cgColor
         
-        //Assignment
-        cell.productName.text = productNameArray[indexPath.row]
-        
-        cell.productImageView.image = productImagesArray[indexPath.row]
-        
+        cell.productImageView.sd_setImage(with: URL(string: self.products[indexPath.row].imageDownloadURL)) { (image, error, cache, url) in
+            cell.productName.text = self.products[indexPath.row].name
+            
+            if image != nil{
+                self.products[indexPath.row].image = image
+            }
+            
+        }
+
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ProductInfo") as! ProductInfoVC
-        ProductsPageVC.currentProduct = Product(name: productNameArray[indexPath.row], image: productImagesArray[indexPath.row])
+        ProductsPageVC.currentProduct = products[indexPath.row]
         self.present(newViewController, animated: true, completion: nil)
     }
     
@@ -67,30 +111,14 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 5
     }
     
-    @IBOutlet weak var menuBarButton: UIBarButtonItem!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        sideMenu()
-        customizeNavBar()
-        
-        continueButton.layer.cornerRadius = 10
-    }
-    
-    func sideMenu() {
-        if revealViewController() != nil{
-            menuBarButton.target = revealViewController()
-            menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController()?.rearViewRevealWidth = 275
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     func customizeNavBar(){
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.barTintColor = navBarColor
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Regular", size: 14)]
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Semibold", size: 19)!]
     }
 
 }

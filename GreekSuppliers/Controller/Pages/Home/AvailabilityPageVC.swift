@@ -67,4 +67,7 @@ class AvailabilityPageVC: UIViewController, UICollectionViewDataSource, UICollec
         cell.dayTextField.inputAccessoryView = accessoryView
         return cell
     }
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 }

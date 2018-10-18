@@ -13,6 +13,9 @@ class TimeNeededVC: UIViewController {
     @IBOutlet weak var timeInputField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeNavBar()

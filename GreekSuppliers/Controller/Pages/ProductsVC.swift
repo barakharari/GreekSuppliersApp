@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductsVC: UIViewController, MenuPageProtocol {
+class ProductsVC: UIViewController{
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     

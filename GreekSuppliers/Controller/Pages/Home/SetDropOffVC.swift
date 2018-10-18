@@ -110,6 +110,9 @@ class SetDropOffVC: UIViewController {
             }
         })
     }
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SetDropOffVC: GMSAutocompleteResultsViewControllerDelegate {
