@@ -1,24 +1,22 @@
 //
-//  NoPlanVC.swift
+//  AboutUsVC.swift
 //  GreekSuppliers
 //
-//  Created by Barak on 10/14/18.
+//  Created by Barak on 10/25/18.
 //  Copyright © 2018 Harariapps. All rights reserved.
 //
 
 import UIKit
 
-class NoPlanVC: UIViewController {
+class AboutUsVC: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
-    @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenu()
         customizeNavBar()
-        
-        continueButton.layer.cornerRadius = 10
+        // Do any additional setup after loading the view.
     }
     
     func sideMenu(){
@@ -35,6 +33,5 @@ class NoPlanVC: UIViewController {
         navigationController?.navigationBar.barTintColor = navBarColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Semibold", size: 19)!]
     }
-    
 
 }

@@ -11,11 +11,32 @@ import UIKit
 class BrandAmbassadorVC: UIViewController{
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var brandAmbassadorButton: UIButton!
+    
+    func alert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func brandAmbassadorButtonPressed(_ sender: UIButton) {
+        brandAmbassadorButton.setTitle("Interest shown", for: .normal)
+        brandAmbassadorButton.backgroundColor = UIColor.lightGray
+        brandAmbassadorButton.isEnabled = false
+        alert(title: "Thanks for the interest!", message: "You will reviece a text/call sometime in the next 3-5 business days.")
+        
+        // TODO: Press again if pressed by accident/ wanna revoke interest
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenu()
         customizeNavBar()
+        customizeView()
+    }
+    
+    func customizeView(){
+        brandAmbassadorButton.layer.cornerRadius = 10
     }
     
     func sideMenu(){

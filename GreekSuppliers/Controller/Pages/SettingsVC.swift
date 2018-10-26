@@ -12,6 +12,7 @@ import Firebase
 class SettingsVC: UIViewController{
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var logOutButton: UIButton!
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         try! Auth.auth().signOut()
@@ -21,6 +22,11 @@ class SettingsVC: UIViewController{
         super.viewDidLoad()
         sideMenu()
         customizeNavBar()
+        customizeView()
+    }
+    
+    func customizeView(){
+        logOutButton.layer.cornerRadius = 10
     }
     
     func sideMenu(){

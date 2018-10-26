@@ -91,7 +91,7 @@ class SetDropOffVC: UIViewController {
     }
     
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
     
     @IBAction func currentLocationButtonPressed(_ sender: UIButton) {
@@ -111,7 +111,7 @@ class SetDropOffVC: UIViewController {
         })
     }
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
 }
 

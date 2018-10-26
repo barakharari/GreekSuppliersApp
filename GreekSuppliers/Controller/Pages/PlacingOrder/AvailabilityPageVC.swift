@@ -68,6 +68,11 @@ class AvailabilityPageVC: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
+    }
+    @IBAction func continueButtonPressed(_ sender: UIButton) {
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "SetDropOff")
+        let navController = UINavigationController(rootViewController: nextVC)
+        self.presentDetail(navController)
     }
 }

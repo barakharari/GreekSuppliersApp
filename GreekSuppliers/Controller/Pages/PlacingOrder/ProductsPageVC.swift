@@ -19,15 +19,9 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var refresher:UIRefreshControl!
     
-    static var currentProduct: Product!
+    static var currentOrder: Order = Order()
     
     var products = [Product]()
-    
-    //refreshing function add to this?
-    @objc func refresh(){
-        //productCollectionView.reloadData()
-        refresher.endRefreshing()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +32,22 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         continueButton.layer.cornerRadius = 10
         
         refresher = UIRefreshControl()
-        refresher.addTarget(self, action: #selector(self.refresh), for: UIControl.Event.valueChanged)
         productCollectionView.addSubview(refresher)
         
-        self.loadData()
-
+        self.refresher.beginRefreshing()
+        self.loadData{_ in
+            self.refresher.endRefreshing()
+        }
     }
     
-    func loadData(){
+    func loadData(completionHandler:@escaping (Bool)->() ){
+        // Remove items from array
+        self.products.removeAll()
         // Create a reference to database
-        dbRef = Database.database().reference()
+        dbRef = Database.database().reference().child("Products")
         
         // Parse each post
-        dbRef.child("Products").observeSingleEvent(of: .value) { (snapshot) in
+        dbRef.observeSingleEvent(of: .value) { (snapshot) in
             
             let products = snapshot.value as! [String: AnyObject]
         
@@ -59,6 +56,7 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self.products.append(newProduct)
             }
             self.productCollectionView.reloadData()
+            completionHandler(true)
         }
     }
     
@@ -71,10 +69,7 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
         
         //Styling
-        cell.productImageView.layer.cornerRadius = 8
-        cell.productImageView.layer.borderWidth = 0.5
-        cell.productImageView.layer.borderColor = UIColor.lightGray.cgColor
-        cell.productName.layer.borderColor = UIColor.lightGray.cgColor
+        cell.clearButton.layer.borderColor = view.backgroundColor?.cgColor
         
         cell.productImageView.sd_setImage(with: URL(string: self.products[indexPath.row].imageDownloadURL)) { (image, error, cache, url) in
             cell.productName.text = self.products[indexPath.row].name
@@ -84,14 +79,39 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             
         }
-
+        
+        if let user = Auth.auth().currentUser{
+            let ref = Database.database().reference().child("users").child(user.uid).child("ProductInfo").child(self.products[indexPath.row].name)
+            ref.observe(.value) { (snapshot) in
+                if snapshot.exists(){
+                    cell.clearButton.isHidden = false
+                    cell.productAmount.isHidden = false
+                    
+                    // Extracting the value for the offer amount
+                    if let offer = snapshot.value as? [String: AnyObject]{
+                        // Iterating through this string, and adding all numeric values to a new one to present to the view
+                        var characterString = "x"
+                        
+                        for letter in (offer["Offer"] as! String).unicodeScalars{
+                            if CharacterSet.decimalDigits.contains(letter){
+                                characterString.unicodeScalars.append(letter)
+                            }
+                        }
+                        cell.productAmount.text = String(characterString)
+                    }
+                } else{
+                    cell.clearButton.isHidden = true
+                    cell.productAmount.isHidden = true
+                }
+            }
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ProductInfo") as! ProductInfoVC
-        ProductsPageVC.currentProduct = products[indexPath.row]
+        
+        ProductsPageVC.currentOrder.product = products[indexPath.row]
         self.present(newViewController, animated: true, completion: nil)
     }
     
@@ -112,7 +132,11 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        
+        if let user = Auth.auth().currentUser{
+        Database.database().reference().child("users").child(user.uid).child("ProductInfo").removeValue()
+            self.dismissDetail()
+        }
     }
     
     func customizeNavBar(){
@@ -120,5 +144,31 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         navigationController?.navigationBar.barTintColor = navBarColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Semibold", size: 19)!]
     }
+    
+    func alert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+
+    
+    @IBAction func continueButtonPressed(_ sender: UIButton) {
+        print("BUTTON PRESSED")
+        if let user = Auth.auth().currentUser{
+            let ref = Database.database().reference().child("users").child(user.uid).child("ProductInfo")
+            ref.observe(.value) { (snapshot) in
+                if snapshot.exists(){
+                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TimeNeededVC") as! TimeNeededVC
+                    let navController = UINavigationController(rootViewController: nextVC)
+                    self.presentDetail(navController)
+                } else{
+                    self.alert(title: "Choose products", message: "Must choose products to continue!")
+                }
+            }
+        }
+        
+        
+    }
+    
 
 }

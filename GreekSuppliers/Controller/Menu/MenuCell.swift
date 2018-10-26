@@ -12,4 +12,5 @@ class MenuCell: UICollectionViewCell {
     
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var pageIcon: UIImageView!
+
 }

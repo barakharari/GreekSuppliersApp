@@ -15,8 +15,11 @@ class DealsPageVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         continueButton.layer.cornerRadius = 10
+        currentPriceLabel.text = "Current Price: " + String(ProductsPageVC.currentOrder.currentPrice)
         customizeNavBar()
+        
     }
     func customizeNavBar(){
         navigationController?.navigationBar.tintColor = UIColor.white
@@ -34,7 +37,12 @@ class DealsPageVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         return cell
     }
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
     
+    @IBAction func continueButtonPressed(_ sender: UIButton) {
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "AvailabilityVC")
+        let navController = UINavigationController(rootViewController: nextVC)
+        self.presentDetail(navController)
+    }
 }
