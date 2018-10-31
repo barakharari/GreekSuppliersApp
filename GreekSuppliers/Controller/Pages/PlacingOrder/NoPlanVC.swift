@@ -12,7 +12,23 @@ import Firebase
 class NoPlanVC: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
-    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var chooseExistingButton: UIButton!
+    @IBOutlet weak var createNewButton: UIButton!
+    
+    @IBAction func chooseExistingPressed(_ sender: UIButton) {
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: "ExistingOrderVC") as! ExistingOrdersVC
+        let navController = UINavigationController(rootViewController: nextVC)
+        self.presentDetail(navController)
+    }
+    
+    @IBAction func createNewPressed(_ sender: UIButton) {
+        if let user = Auth.auth().currentUser{
+            Database.database().reference().child("users").child(user.uid).child("ProductInfo").removeValue()
+            let nextVC = storyboard?.instantiateViewController(withIdentifier: "ProductsPageVC") as! ProductsPageVC
+            let navController = UINavigationController(rootViewController: nextVC)
+            presentDetail(navController)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +38,12 @@ class NoPlanVC: UIViewController {
     }
     
     func customizeView(){
-        continueButton.layer.cornerRadius = 10
+        chooseExistingButton.layer.cornerRadius = 10
+        chooseExistingButton.layer.borderWidth = 1.2
+        chooseExistingButton.layer.borderColor = UIColor(red: 126/255, green: 25/255, blue: 27/255, alpha: 1.0).cgColor
+        createNewButton.layer.cornerRadius = 10
+        createNewButton.layer.borderWidth = 1.2
+        createNewButton.layer.borderColor = UIColor(red: 126/255, green: 25/255, blue: 27/255, alpha: 1.0).cgColor
     }
     
     func sideMenu(){
@@ -39,15 +60,4 @@ class NoPlanVC: UIViewController {
         navigationController?.navigationBar.barTintColor = navBarColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font: UIFont(name: "SourceSerifPro-Semibold", size: 19)!]
     }
-    
-    @IBAction func continueButtonPressed(_ sender: UIButton) {
-        
-        if let user = Auth.auth().currentUser{
-            Database.database().reference().child("users").child(user.uid).child("ProductInfo").removeValue()
-                let nextVC = storyboard?.instantiateViewController(withIdentifier: "ProductsPageVC") as! ProductsPageVC
-                let navController = UINavigationController(rootViewController: nextVC)
-            presentDetail(navController)
-        }
-    }
-    
 }

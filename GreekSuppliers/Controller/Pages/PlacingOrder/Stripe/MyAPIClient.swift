@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import Stripe
 import Alamofire
 
 class MyAPIClient: NSObject, STPEphemeralKeyProvider {
-
+    
     static let sharedClient = MyAPIClient()
     var baseURLString: String? = nil
     var baseURL: URL {
@@ -29,12 +28,13 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
                         completion: @escaping STPErrorBlock) {
         let url = self.baseURL.appendingPathComponent("charge")
         var params: [String: Any] = [
-            "source": result.source.stripeID,
+            "customer": "cus_DrO9vbjDxzLhfT", // TODO: Update customer id to be the actual customerID per customer
             "amount": amount,
-            "metadata": [
-                // example-ios-backend allows passing metadata through to Stripe
-                "charge_request_id": "B3E611D1-5FA1-4410-9CEC-00958A5126CB",
-            ],
+            "currency": "USD",
+//            "metadata": [
+//                // example-ios-backend allows passing metadata through to Stripe
+//                "charge_request_id": "B3E611D1-5FA1-4410-9CEC-00958A5126CB",
+//            ],
             ]
         params["shipping"] = STPAddress.shippingInfoForCharge(with: shippingAddress, shippingMethod: shippingMethod)
         Alamofire.request(url, method: .post, parameters: params)
@@ -53,6 +53,7 @@ class MyAPIClient: NSObject, STPEphemeralKeyProvider {
         let url = self.baseURL.appendingPathComponent("ephemeral_keys")
         Alamofire.request(url, method: .post, parameters: [
             "api_version": apiVersion,
+            "customer_id": "cus_DrO9vbjDxzLhfT"
             ])
             .validate(statusCode: 200..<300)
             .responseJSON { responseJSON in

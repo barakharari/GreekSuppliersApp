@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Stripe
 
 struct Settings {
     let theme: STPTheme

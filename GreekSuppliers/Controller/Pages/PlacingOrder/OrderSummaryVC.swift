@@ -90,9 +90,9 @@ class OrderSummaryVC: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func dealsButtonPressed(_ sender: UIButton) {
-        let nextVC = storyBoard.instantiateViewController(withIdentifier: "DealsPageVC")
-        let navController = UINavigationController(rootViewController: nextVC)
-        self.presentDetail(navController)
+//        let nextVC = storyBoard.instantiateViewController(withIdentifier: "DealsPageVC")
+//        let navController = UINavigationController(rootViewController: nextVC)
+//        self.presentDetail(navController)
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {

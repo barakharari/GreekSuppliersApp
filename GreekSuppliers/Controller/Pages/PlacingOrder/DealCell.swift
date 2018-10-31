@@ -15,6 +15,10 @@ class DealCell: UICollectionViewCell {
     
     var buttonSelected = false
     
+    override func layoutSubviews() {
+        dealConfirmButton.layer.cornerRadius = 10
+    }
+    
     @IBAction func dealButtonPressed(_ sender: UIButton) {
         
         if !buttonSelected{

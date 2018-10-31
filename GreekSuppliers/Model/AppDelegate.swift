@@ -23,6 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyDuv7w4UnOkVOGGaowZLg1kynrf7ZO_V5E")
         GMSPlacesClient.provideAPIKey("AIzaSyDuv7w4UnOkVOGGaowZLg1kynrf7ZO_V5E")
             FirebaseApp.configure()
+//        let rootVC = BrowseProductsViewController()
+//        let navigationController = UINavigationController(rootViewController: rootVC)
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        window.rootViewController = navigationController;
+//        window.makeKeyAndVisible()
+//        self.window = window
         return true
     }
 
@@ -46,6 +52,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // This method is where you handle URL opens if you are using a native scheme URLs (eg "yourexampleapp://")
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let stripeHandled = Stripe.handleURLCallback(with: url)
+        
+        if (stripeHandled) {
+            return true
+        }
+        else {
+            // This was not a stripe url, do whatever url handling your app
+            // normally does, if any.
+        }
+        
+        return false
+    }
+    
+    // This method is where you handle URL opens if you are using univeral link URLs (eg "https://example.com/stripe_ios_callback")
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            if let url = userActivity.webpageURL {
+                let stripeHandled = Stripe.handleURLCallback(with: url)
+                
+                if (stripeHandled) {
+                    return true
+                }
+                else {
+                    // This was not a stripe url, do whatever url handling your app
+                    // normally does, if any.
+                }
+            }
+            
+        }
+        return false
     }
 
 

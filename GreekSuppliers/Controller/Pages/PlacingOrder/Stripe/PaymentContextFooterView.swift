@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import Stripe
 
 class PaymentContextFooterView: UIView {
 
-    var insetMargins: UIEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+    var insetMargins: UIEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 
     var text: String = "" {
         didSet {
@@ -40,7 +39,7 @@ class PaymentContextFooterView: UIView {
     }
 
     override func layoutSubviews() {
-        textLabel.frame = UIEdgeInsetsInsetRect(self.bounds, insetMargins)
+        textLabel.frame = self.bounds.inset(by: insetMargins)
     }
 
     override func sizeThatFits(_ size: CGSize) -> CGSize {

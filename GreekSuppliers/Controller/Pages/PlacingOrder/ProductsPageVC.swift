@@ -9,10 +9,11 @@
 import UIKit
 import Firebase
 
-class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var productCollectionView: UICollectionView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var dbRef: DatabaseReference!
     var storageRef: StorageReference!
@@ -27,12 +28,25 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         // Set up Nav Bar
         customizeNavBar()
-        
+        customizeView()
+    }
+    
+    func customizeView(){
         // Customize Button
         continueButton.layer.cornerRadius = 10
         
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: (productCollectionView.frame.width / 2) - 20, height: (productCollectionView.frame.width / 2) + 30)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        
+        productCollectionView.collectionViewLayout = layout
+        
         refresher = UIRefreshControl()
         productCollectionView.addSubview(refresher)
+        productCollectionView.layer.borderWidth = 1.0
+        productCollectionView.layer.borderColor = UIColor.lightGray.cgColor
         
         self.refresher.beginRefreshing()
         self.loadData{_ in
@@ -115,22 +129,6 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.present(newViewController, animated: true, completion: nil)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width / 2) - 10, height: (view.frame.width / 2) + 30)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         
         if let user = Auth.auth().currentUser{
@@ -153,16 +151,15 @@ class ProductsPageVC: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
-        print("BUTTON PRESSED")
         if let user = Auth.auth().currentUser{
             let ref = Database.database().reference().child("users").child(user.uid).child("ProductInfo")
             ref.observe(.value) { (snapshot) in
                 if snapshot.exists(){
-                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "TimeNeededVC") as! TimeNeededVC
+                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "DealsPageVC") as! DealsPageVC
                     let navController = UINavigationController(rootViewController: nextVC)
                     self.presentDetail(navController)
                 } else{
-                    self.alert(title: "Choose products", message: "Must choose products to continue!")
+                    self.alert(title: "Choose products", message: "Must choose a product to continue!")
                 }
             }
         }

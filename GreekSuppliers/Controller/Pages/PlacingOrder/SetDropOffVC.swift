@@ -10,15 +10,19 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class SetDropOffVC: UIViewController {
+class SetDropOffVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     @IBOutlet weak var locationSelectedLabel: UILabel!
     @IBOutlet weak var currentLocationButton: UIButton!
+    
+    @IBOutlet weak var continueButton: UIButton!
     
     @IBOutlet weak var currentLocationView: UIView!
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
+    var locationManager: CLLocationManager!
+    var mapView: GMSMapView!
     
     var placesClient: GMSPlacesClient!
     
@@ -41,17 +45,47 @@ class SetDropOffVC: UIViewController {
         NSLayoutConstraint.activate([trailingConstraint, bottomConstraint, heightConstraint, widthConstraint])
     }
     
+    func customizeView(){
+        continueButton.layer.cornerRadius = 10
+        locationViewConstraints()
+        positionCurrentLocationButton()
+    }
+    
     override func viewDidLoad() {
+        
+        //TODO: ORGANIZE THIS CLASS/ MAKE THE INITIAL VIEW YOUR CURRENT LOCATION
+        
         customizeNavBar()
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled()
+        {
+            
+            let status: CLAuthorizationStatus = CLLocationManager.authorizationStatus()
+            if status == CLAuthorizationStatus.notDetermined
+            {
+                locationManager.requestAlwaysAuthorization()
+                locationManager.requestWhenInUseAuthorization()
+            }
+        } else {
+            print("locationServices disenabled")
+        }
+        locationManager.startUpdatingLocation()
+        self.locationManager.startUpdatingLocation()
         
         placesClient = GMSPlacesClient.shared()
         
         // This will eventually be the users school
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.delegate = self
         view = mapView
-        locationViewConstraints()
-        positionCurrentLocationButton()
+        
+        customizeView()
         
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
@@ -77,7 +111,7 @@ class SetDropOffVC: UIViewController {
         currentLocationView.layer.cornerRadius = 10
         let leadingConstraint = currentLocationView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8)
         let trailingConstraint = currentLocationView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8)
-        let bottomConstraint = currentLocationView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8)
+        let bottomConstraint = currentLocationView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16)
         let heightConstraint = currentLocationView.heightAnchor.constraint(equalToConstant: 150)
         NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, bottomConstraint, heightConstraint])
     }
@@ -105,13 +139,26 @@ class SetDropOffVC: UIViewController {
                 for likelihood in placeLikelihoodList.likelihoods {
                     let place = likelihood.place
                     self.locationSelectedLabel.text = place.formattedAddress
-                    GMSCameraUpdate.setCamera(GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 16.0))
+                    let update = GMSCameraUpdate.setCamera(GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 16.0))
+                    self.mapView.moveCamera(update)
                 }
+                
             }
         })
     }
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         dismissDetail()
+    }
+    
+    var window: UIWindow?
+    
+    @IBAction func finalOrderReviewButtonPressed(_ sender: UIButton) {
+        let rootVC = BrowseProductsViewController()
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = navigationController;
+        window.makeKeyAndVisible()
+        self.window = window
     }
 }
 

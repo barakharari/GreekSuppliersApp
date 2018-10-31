@@ -16,14 +16,6 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var productAmount: UILabel!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         if let user = Auth.auth().currentUser{
             let ref = Database.database().reference().child("users").child(user.uid).child("ProductInfo").child(productName.text!)
